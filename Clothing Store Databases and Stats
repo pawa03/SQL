@@ -1,0 +1,21 @@
+CREATE TABLE clothing (id INTEGER PRIMARY KEY ,name Text, price INTEGER, quantity INTEGER ,Bar_code INTEGER );
+
+INSERT INTO clothing VALUES
+(1,"Skirt" ,60 ,5 ,55677),
+(2, "Jersey" , 80 ,4,28828),
+(3, "Panty", 20 ,5, 45345),
+(4, "Trouser", 110, 17, 44443),
+(5,"Shirt",96,15,28678),
+(6, "Heels", 150, 20, 36782),
+(7, "Bra", 30,10,27189),
+(8, "Sneakers", 200, 10,23678),
+(9, "Crop top", 40,15,32789),
+(10, "Dress", 80, 20, 38290),
+(11,"Shorty", 55,6,28973),
+(12,"hand bag", 75,3,3398),
+(13, "swim suits", 45,6,28970),
+(14, "scaf",45,6, 34567),
+(15, "hat", 20, 2, 23456)
+;
+SELECT * From clothing ORDER by price;
+SELECT SUM(quantity) FROM clothing;
