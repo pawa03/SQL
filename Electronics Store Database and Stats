@@ -1,0 +1,43 @@
+CREATE TABLE Electronics (id INTEGER PRIMARY KEY,name TEXT,quantity INTEGER,price INTEGER, color TEXT);
+
+INSERT INTO Electronics VALUES
+(1,'Iphone',7,7000.00,'Silver'),
+(2,'Smartphone',15,4500.00,'Black'),
+(3,'Tablets', 3,3700.00, 'Black'),
+(4,'Power bank',10,250.00,'White'),
+(5,'Chargers',20,100.00,'White'),
+(6,'Cases and Covers',50,40.00,'Black'),
+(7,'Phone batteries',15,300.00,'Black'),
+(8,'Portable speakers',5, 350.00,'Black'),
+(9,'Earphone',35,100.00,'White'),
+(10,'Self stick and Tripods', 9, 180.00,'Black'),
+(11,'Screen protectors', 70,150.00,'Blue'),
+(12,'Adapters',8,200.00,'Black'),
+(13,'Cables',30,50.00,'Black'),
+(14,'Headphone',18,180.00,'Black'),
+(15,'USB',10,80.00,'Red')
+;
+
+SELECT * FROM Electronics;
+
+/** Select all items from the electronics table and sort the items by price **/
+SELECT * FROM Electronics ORDER BY price;
+
+/** SELECT all items from Electronics from which the price is less than 500 **/
+SELECT *FROM Electronics WHERE price< 500 ORDER BY price;
+
+/** Find all the total quantity of the items in the store **/
+
+SELECT SUM(quantity) FROM Electronics;
+
+/** Find the price of the cheapest item **/
+SELECT MIN(price)AS Smallest_price FROM Electronics;
+
+/** Find the price of the most expensive item **/
+SELECT MAX(price) AS largest_price FROM Electronics;
+
+/** Find the Average price of all items **/
+SELECT AVG(price) FROM Electronics;
+
+
+
