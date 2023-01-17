@@ -1,3 +1,6 @@
+
+#In this SQL , I design my own Electronics store and inserted the products that are sold in the store then show statistics about the products.
+
 CREATE TABLE Electronics (id INTEGER PRIMARY KEY,name TEXT,quantity INTEGER,price INTEGER, color TEXT);
 
 INSERT INTO Electronics VALUES
