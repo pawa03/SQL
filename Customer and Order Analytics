@@ -33,6 +33,13 @@ FROM BIT_DB.JanSales
 ORDER BY price ASC 
 LIMIT 1;
 
+8.List all the products sold in Los Angeles in February, and include how many of each were sold.
+SELECT  Product, sum(quantity)
+FROM BIT_DB.FebSales 
+WHERE location like '%Los Angeles%'
+GROUP BY Product;
+8.
+
 
 5.What is the total revenue for each product sold in January? (Revenue can be calculated using the number of products sold and the price of the products).
 SELECT product, sum (quantity)*price AS revenue
