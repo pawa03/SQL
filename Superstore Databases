@@ -26,40 +26,55 @@ VALUES
     (13, 'Slow Cooker', 'Appliances', 49.95, 30, 4.7),
     (14, 'Cutlery Set', 'Kitchen Supplies', 34.50, 40, 4.4),
     (15, 'Cozy Throw Blanket', 'Furnishings', 24.99, 100, 4.2);
-
+#1 Select all items from the superstore database
 SELECT * FROM superstore ;
 
+#2 Select all products and order the item by price
 SELECT item_name,price  
 FROM superstore
 ORDER BY price desc ;
 
+
+#3 How many products are in the store?
 SELECT COUNT(item_id)
 FROM superstore ;
 
 
-
+#4 How many products are in each category ?
 SELECT COUNT(item_name), category
 FROM superstore
 GROUP BY category ;
 
+#5 Show the products with the average rating of more than 4.5
 SELECT item_name, average_rating 
 FROM superstore
 WHERE average_rating >= 4.5
 ORDER BY average_rating desc ;
 
+
+#6 Find the products with stock quanting less than 25
 SELECT item_name,stock_quantity
 FROM superstore
 WHERE stock_quantity < 25
 ORDER BY stock_quantity desc ;
 
+#7 Show a statistic about the price for items in the category of "Kitchen Supplies"
 SELECT AVG(price) ,category
 FROM superstore
 WHERE category= 'Kitchen Supplies' ;
 
+#8 Show a statistic about the price for items in the category of "Appliances"
 SELECT MAX(price) , item_name,category
 FROM superstore
-WHERE category= 'Kitchen Supplies' ;
+WHERE category= 'Appliances' ;
 
+#9 Show items that are in the category of 'Electronics'
+SELECT item_name,price
+FROM superstore 
+WHERE category = 'Electronics'
+ORDER BY price;
+
+#10 How many Wireless Earbud are in stock ?
 SELECT stock_quantity , item_name
 FROM superstore
 WHERE item_name= 'Wireless Earbuds' ;
